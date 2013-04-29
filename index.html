@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+
+<!-- Code for Project 5 will heavily borrow from Project 4 markup-->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <title>Project 5- Seth Morrison</title>
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="stylesheet" href="assets/css/jqtouch.css">
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+		<script src="assets/js/libs/modernizr.foundation.js"></script>
+    </head>
+   
+   <body>
+		<div id="jqt">
+			<!--HTML for the HOME page-->
+			<div id="home">	
+				<header class="toolbar">
+					<h1>Project 5</h1>
+					<a class="button slideup" id="infoButton" href="#add"><i class="icon-plus"></i></a>
+				</header>
+					<div id="page">
+						<form action="#" method="get" id="search">
+							<div class="location">
+								<label for="location"><i class="icon-search"></i></label>
+								<input type="text" value="" id="location" placeholder="Center of Circle"/>
+							</div>
+							<div class="distance">
+								<label for="distance">Radial Distance</label>
+								<select name="distance" id="distance">
+									<option value="">--</option>
+									<option value="5">5 mi</option>
+									<option value="10">10 mi</option>
+									<option value="15">15 mi</option>
+									<option value="25">25 mi</option>
+									<option value="50">50 mi</option>
+									<option value="100">100 mi</option>
+								</select>
+								<a href="#" class="clear" style="display:none">Clear Search</a>
+							</div>
+							<button class="submit redButton" type="submit">Search</button>
+						</form>
+					</div>
+					<div id="page">
+						<div id="map" class="map"></div>
+					</div>
+			</div>
+			<!--HTML for the ADD LOCATION page-->
+			<div id="add">
+				<header class="toolbar">
+                    <h1>New Location</h1>
+                    <a class="back" href="#home">Map</a>
+                </header>
+                
+	        	<form action="id" id="new-location" class="scroll">
+                    <ul class="edit rounded">
+                        <li><input type="text" name="name" placeholder="Location Name" id="name"></li>
+                        <li><input type="text" name="street" placeholder="Street Address" id="street"></li>
+                        <li><input type="text" name="city" placeholder="City" id="city"></li>
+                        <li><input type="text" name="state" placeholder="St" id="state"></li>
+                        <li><input type="text" name="zip" placeholder="Zip Code" id="zip"></li>
+                    </ul>
+                    <div class="hidden-page">
+                    	<button class="submit redButton">Add Location</button>
+                    </div>
+                </form> 
+			</div>
+			<!--HTML for the EDIT page-->
+			<div id="edit">
+            	<header class="toolbar">
+                    <h1>Edit Location</h1>
+                    <a class="back" href="#home">Map</a>
+					<a class="button slideup" id="infoButton" href="#delete"><i class="icon-remove"></i>   Delete</a>
+                </header>
+                <form action="id" id="edit-location" class="scroll">
+                    <ul class="edit rounded">
+                        <li><input type="text" name="name" placeholder="Location Name" id="name"></li>
+                        <li><input type="text" name="street" placeholder="Street Address" id="street"></li>
+                        <li><input type="text" name="city" placeholder="City" id="city"></li>
+                        <li><input type="text" name="state" placeholder="St" id="state"></li>
+                        <li><input type="text" name="zip" placeholder="Zip Code" id="zip"></li>
+                    </ul>
+                    <div class="hidden-page">
+                    	<button class="submit redButton">Edit Location</button>
+                    </div>
+                </form>        		
+		    </div>
+			
+			<div id="delete">
+				<header class="toolbar">
+					<h1>Delete Location</h1>
+					<a class="back" href="#edit">Cancel</a>
+				</header>
+				
+				<form action="#" id="delete-location" class="scroll">
+					<ul class="edit rounded">
+						<li><p>Are you sure that you want to delete this location?</p></li>
+					<ul>
+					
+					<div class="hidden-page">
+						<button class="submit redButton">Yes</button>
+					</div>
+				</form>
+			</div>
+					
+			
+		</div>
+    	
+    	<script src="http:://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+		</script>
+        <script>
+			window.jQuery || document.write('<script src="assets/js/libs/jquery.js"><\/script>')</script>
+		<script src="assets/jqtouch.js" type="text/javascript"></script>
+		<script src="assets/jqtouch-jquery.js" type="text/javascript"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+		<script type="text/javascript" src="assets/js/libs/localstoragedb.js"></script>
+        <script type="text/javascript" src="assets/js/MobileMap.js"></script>
+        <script src="assets/js/app.js" type="text/javascript"></script>
+    </body>
+</html>
