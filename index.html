@@ -5,13 +5,13 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
 
-<!-- Code for Project 5 will heavily borrow from Project 4 markup-->
+<!-- Code for Project 6 will heavily borrow from Project 5 markup-->
 
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         
-        <title>Project 5- Seth Morrison</title>
+        <title>Project 6- Seth Morrison</title>
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -30,7 +30,8 @@
 			<!--HTML for the HOME page-->
 			<div id="home">	
 				<header class="toolbar">
-					<h1>Project 5</h1>
+					<h1>Project 6</h1>
+					<a class="leftButton button slideup" id="infoButton" href="#settings"><i class="icon-cog"></i></a>
 					<a class="button slideup" id="infoButton" href="#add"><i class="icon-plus"></i></a>
 				</header>
 					<div id="page">
@@ -99,7 +100,7 @@
                     </div>
                 </form>        		
 		    </div>
-			
+			<!--HTML for the DELETE Page-->
 			<div id="delete">
 				<header class="toolbar">
 					<h1>Delete Location</h1>
@@ -116,7 +117,37 @@
 					</div>
 				</form>
 			</div>
-					
+			<!--HTML for the SETTINGS Page-->
+			<div id="settings">
+				<header class="toolbar">
+					<h1>Settings</h1>
+					<a class="leftButton button slidedown" ide="infoButton" href="#home"><i class="icon-home"></i></a>
+				</header>
+				<form action="id" id="settings" class="scroll">
+					<ul class="edit rounded">
+						<li>
+							<label for="marker">Marker Icon URL</label>
+							<input type="text" name="marker" placeholder="http://www.example.com/marker.jpg" id="marker">
+						</li>
+						<li>
+							<label for="size">Marker Icon Size</label>
+							<input type="text" name="size" placeholder="40,40" id="size">
+						</li>
+						<li>
+							<label for="type">Default Map Type</label>
+							<select id="map_type" name="map_type">
+								<option value="hybrid">Hybrid</option>
+								<option value="roadmap">Roadmap</option>
+								<option value="satellite">Satellite</option>
+								<option value="terrain">Terrain</option>
+							</select>
+						</li>
+					</ul>
+					<div class="hidden-page">
+						<button class="submit redButton">Save Settings</button>
+					</div>
+				</form>
+			</div>	
 			
 		</div>
     	
